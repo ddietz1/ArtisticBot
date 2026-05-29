@@ -1,0 +1,92 @@
+[0.013s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_core/interbotix_ros_xseries/interbotix_xs_sdk -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install
+[0.082s] -- The C compiler identification is GNU 14.0.1
+[0.153s] -- The CXX compiler identification is GNU 14.0.1
+[0.172s] -- Detecting C compiler ABI info
+[0.287s] -- Detecting C compiler ABI info - done
+[0.298s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.298s] -- Detecting C compile features
+[0.299s] -- Detecting C compile features - done
+[0.309s] -- Detecting CXX compiler ABI info
+[0.429s] -- Detecting CXX compiler ABI info - done
+[0.441s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.441s] -- Detecting CXX compile features
+[0.442s] -- Detecting CXX compile features - done
+[0.446s] -- Found ament_cmake: 2.7.4 (/opt/ros/kilted/share/ament_cmake/cmake)
+[0.565s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.677s] -- Found ament_index_cpp: 1.11.2 (/opt/ros/kilted/share/ament_index_cpp/cmake)
+[0.679s] -- Found rclcpp: 29.5.6 (/opt/ros/kilted/share/rclcpp/cmake)
+[0.708s] -- Found rosidl_generator_c: 4.9.6 (/opt/ros/kilted/share/rosidl_generator_c/cmake)
+[0.720s] -- Found rosidl_generator_cpp: 4.9.6 (/opt/ros/kilted/share/rosidl_generator_cpp/cmake)
+[0.735s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.750s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.814s] -- Found rmw_implementation_cmake: 7.8.2 (/opt/ros/kilted/share/rmw_implementation_cmake/cmake)
+[0.817s] -- Found rmw_fastrtps_cpp: 9.3.3 (/opt/ros/kilted/share/rmw_fastrtps_cpp/cmake)
+[0.928s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.943s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.007s] -- Found rclpy: 9.1.4 (/opt/ros/kilted/share/rclpy/cmake)
+[1.009s] -- Found sensor_msgs: 5.5.1 (/opt/ros/kilted/share/sensor_msgs/cmake)
+[1.048s] -- Found urdf: 2.12.3 (/opt/ros/kilted/share/urdf/cmake)
+[1.058s] -- Found interbotix_xs_msgs: 0.0.0 (/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_msgs/cmake)
+[1.094s] -- Found interbotix_xs_driver: 0.3.4 (/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_driver/cmake)
+[1.098s] [0mCMake Deprecation Warning at /opt/ros/kilted/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+[1.098s]   ament_target_dependencies() is deprecated.  Use target_link_libraries()
+[1.098s]   with modern CMake targets instead.  Try replacing this call with:
+[1.098s] 
+[1.098s]     target_link_libraries(xs_sdk PUBLIC
+[1.098s]       ${interbotix_xs_msgs_TARGETS}
+[1.098s]       ${sensor_msgs_TARGETS}
+[1.099s]       ament_index_cpp::ament_index_cpp
+[1.099s]       interbotix_xs_driver::interbotix_xs_driver
+[1.099s]       rclcpp::rclcpp
+[1.099s]       sensor_msgs::sensor_msgs_library
+[1.099s]       urdf::urdf
+[1.099s]     )
+[1.099s] 
+[1.099s] Call Stack (most recent call first):
+[1.099s]   CMakeLists.txt:40 (ament_target_dependencies)
+[1.099s] 
+[1.099s] [0m
+[1.190s] -- Configuring done (1.2s)
+[1.209s] -- Generating done (0.0s)
+[1.212s] -- Build files have been written to: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk
+[1.220s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk' returned '0': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_core/interbotix_ros_xseries/interbotix_xs_sdk -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install
+[1.221s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk -- -j22 -l22
+[1.290s] [ 66%] [32mBuilding CXX object CMakeFiles/xs_sdk.dir/src/xs_sdk.cpp.o[0m
+[1.290s] [ 66%] [32mBuilding CXX object CMakeFiles/xs_sdk.dir/src/xs_sdk_obj.cpp.o[0m
+[1.390s] In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_core/interbotix_ros_xseries/interbotix_xs_sdk/include/interbotix_xs_sdk/xs_sdk_obj.hpp:40[m[K,
+[1.390s]                  from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_core/interbotix_ros_xseries/interbotix_xs_sdk/src/xs_sdk.cpp:31[m[K:
+[1.390s] [01m[K/opt/ros/kilted/include/urdf/urdf/model.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include urdf/model.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+[1.391s]    35 | #[01;35m[Kwarning[m[K \
+[1.391s]       |  [01;35m[K^~~~~~~[m[K
+[1.396s] In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_core/interbotix_ros_xseries/interbotix_xs_sdk/include/interbotix_xs_sdk/xs_sdk_obj.hpp:40[m[K,
+[1.396s]                  from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_core/interbotix_ros_xseries/interbotix_xs_sdk/src/xs_sdk_obj.cpp:33[m[K:
+[1.396s] [01m[K/opt/ros/kilted/include/urdf/urdf/model.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include urdf/model.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+[1.396s]    35 | #[01;35m[Kwarning[m[K \
+[1.396s]       |  [01;35m[K^~~~~~~[m[K
+[43.007s] [100%] [32m[1mLinking CXX executable xs_sdk[0m
+[43.178s] [100%] Built target xs_sdk
+[43.192s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk' returned '0': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk -- -j22 -l22
+[43.193s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk
+[43.205s] -- Install configuration: "Release"
+[43.205s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/interbotix_xs_sdk/xs_sdk
+[43.207s] -- Set non-toolchain portion of runtime path of "/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/interbotix_xs_sdk/xs_sdk" to ""
+[43.207s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/interbotix_xs_sdk/xs_sdk_sim.py
+[43.207s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk//config
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk//config/mode_configs_template.yaml
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk//config/motor_configs_template.yaml
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/package_run_dependencies/interbotix_xs_sdk
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/parent_prefix_path/interbotix_xs_sdk
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/environment/ament_prefix_path.sh
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/environment/ament_prefix_path.dsv
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/environment/path.sh
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/environment/path.dsv
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/local_setup.bash
+[43.208s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/local_setup.sh
+[43.209s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/local_setup.zsh
+[43.209s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/local_setup.dsv
+[43.209s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/package.dsv
+[43.209s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/packages/interbotix_xs_sdk
+[43.209s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/cmake/interbotix_xs_sdkConfig.cmake
+[43.209s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/cmake/interbotix_xs_sdkConfig-version.cmake
+[43.209s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_sdk/package.xml
+[43.212s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk' returned '0': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_sdk

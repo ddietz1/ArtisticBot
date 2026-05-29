@@ -1,0 +1,55 @@
+[0mCMake Deprecation Warning at /opt/ros/kilted/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+  ament_target_dependencies() is deprecated.  Use target_link_libraries()
+  with modern CMake targets instead.  Try replacing this call with:
+
+    target_link_libraries(moveit_interface PUBLIC
+      ${geometry_msgs_TARGETS}
+      ${interbotix_moveit_interface_msgs_TARGETS}
+      ${moveit_msgs_TARGETS}
+      moveit_ros_planning_interface::moveit_common_planning_interface_objects
+      moveit_ros_planning_interface::moveit_move_group_interface
+      moveit_ros_planning_interface::moveit_planning_scene_interface
+      moveit_visual_tools::moveit_visual_tools
+      rclcpp::rclcpp
+    )
+
+Call Stack (most recent call first):
+  CMakeLists.txt:43 (ament_target_dependencies)
+
+[0m
+In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/interbotix_moveit_interface/moveit_interface_obj.hpp:38[m[K,
+                 from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface_obj.cpp:29[m[K:
+[01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/interbotix_moveit_interface/moveit_interface_obj.hpp:38[m[K,
+                 from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface.cpp:29[m[K:
+[01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | a message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                       [01;36m[K^[m[K
+
+In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/interbotix_moveit_interface/moveit_interface_obj.hpp:39[m[K:
+[01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/interbotix_moveit_interface/moveit_interface_obj.hpp:39[m[K:
+[01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | a message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                       [01;36m[K^[m[K
+
+[01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface_obj.cpp:[m[K In member function ‘[01m[Kbool interbotix::InterbotixMoveItInterface::[01;32m[Kmoveit_plan_cartesian_path[m[K(std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >)[m[K’:
+[01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface_obj.cpp:204:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble moveit::planning_interface::MoveGroupInterface::[01;32m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)[m[K’ is deprecated: Drop jump_threshold [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  204 |   double fraction = [01;35m[Kmove_group->computeCartesianPath([m[K
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+  205 | [01;35m[K    waypoints,[m[K
+      |     [01;35m[K~~~~~~~~~~[m[K                                       
+  206 | [01;35m[K    eef_step,[m[K
+      |     [01;35m[K~~~~~~~~~[m[K                                        
+  207 | [01;35m[K    jump_threshold,[m[K
+      |     [01;35m[K~~~~~~~~~~~~~~~[m[K                                  
+  208 | [01;35m[K    trajectory)[m[K;
+      |     [01;35m[K~~~~~~~~~~~[m[K                                      
+In file included from [01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3:[m[K [01;36m[Knote: [m[Kdeclared here
+  765 |   [01;36m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K

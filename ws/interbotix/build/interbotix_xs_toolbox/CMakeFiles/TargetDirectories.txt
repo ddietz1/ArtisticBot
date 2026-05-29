@@ -1,0 +1,9 @@
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_toolbox/CMakeFiles/uninstall.dir
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_toolbox/CMakeFiles/interbotix_xs_toolbox_uninstall.dir
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_toolbox/CMakeFiles/test.dir
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_toolbox/CMakeFiles/edit_cache.dir
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_toolbox/CMakeFiles/rebuild_cache.dir
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_toolbox/CMakeFiles/list_install_components.dir
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_toolbox/CMakeFiles/install.dir
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_toolbox/CMakeFiles/install/local.dir
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_toolbox/CMakeFiles/install/strip.dir

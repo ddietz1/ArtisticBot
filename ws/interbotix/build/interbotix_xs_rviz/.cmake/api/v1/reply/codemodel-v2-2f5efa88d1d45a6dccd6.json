@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-58e4a1b6206402183681.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "interbotix_xs_rviz",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "interbotix_xs_rviz::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-interbotix_xs_rviz-Release-7e512dd73b9765be4fb2.json",
+					"name" : "interbotix_xs_rviz",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "interbotix_xs_rviz_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-interbotix_xs_rviz_autogen-Release-28d948428de1c08be02f.json",
+					"name" : "interbotix_xs_rviz_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "interbotix_xs_rviz_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-interbotix_xs_rviz_autogen_timestamp_deps-Release-fcd3ca9c9ddab8f41445.json",
+					"name" : "interbotix_xs_rviz_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "interbotix_xs_rviz_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-interbotix_xs_rviz_uninstall-Release-a5bf32212f5980dc5096.json",
+					"name" : "interbotix_xs_rviz_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-32a85dd880d11fdc2a12.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_rviz",
+		"source" : "/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_xs_toolbox/interbotix_xs_rviz"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

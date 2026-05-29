@@ -1,0 +1,15 @@
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/package_run_dependencies/interbotix_ros_xsarms
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/parent_prefix_path/interbotix_ros_xsarms
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/environment/ament_prefix_path.sh
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/environment/ament_prefix_path.dsv
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/environment/path.sh
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/environment/path.dsv
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/local_setup.bash
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/local_setup.sh
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/local_setup.zsh
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/local_setup.dsv
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/package.dsv
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/packages/interbotix_ros_xsarms
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/cmake/interbotix_ros_xsarmsConfig.cmake
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/cmake/interbotix_ros_xsarmsConfig-version.cmake
+/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_ros_xsarms/package.xml

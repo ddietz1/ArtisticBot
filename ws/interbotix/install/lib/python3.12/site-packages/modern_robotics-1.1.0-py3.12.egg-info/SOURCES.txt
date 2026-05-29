@@ -1,0 +1,10 @@
+README.md
+setup.py
+../../../../build/modern_robotics/modern_robotics.egg-info/PKG-INFO
+../../../../build/modern_robotics/modern_robotics.egg-info/SOURCES.txt
+../../../../build/modern_robotics/modern_robotics.egg-info/dependency_links.txt
+../../../../build/modern_robotics/modern_robotics.egg-info/requires.txt
+../../../../build/modern_robotics/modern_robotics.egg-info/top_level.txt
+modern_robotics/__init__.py
+modern_robotics/__version__.py
+modern_robotics/core.py

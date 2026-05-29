@@ -1,0 +1,153 @@
+[0.036s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install
+[0.116s] -- The C compiler identification is GNU 14.0.1
+[0.177s] -- The CXX compiler identification is GNU 14.0.1
+[0.195s] -- Detecting C compiler ABI info
+[0.285s] -- Detecting C compiler ABI info - done
+[0.294s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.295s] -- Detecting C compile features
+[0.295s] -- Detecting C compile features - done
+[0.303s] -- Detecting CXX compiler ABI info
+[0.417s] -- Detecting CXX compiler ABI info - done
+[0.423s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.424s] -- Detecting CXX compile features
+[0.424s] -- Detecting CXX compile features - done
+[0.427s] -- Found ament_cmake: 2.7.4 (/opt/ros/kilted/share/ament_cmake/cmake)
+[0.588s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.717s] -- Found interbotix_moveit_interface_msgs: 0.0.0 (/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface_msgs/cmake)
+[0.762s] -- Found rosidl_generator_c: 4.9.6 (/opt/ros/kilted/share/rosidl_generator_c/cmake)
+[0.777s] -- Found rosidl_generator_cpp: 4.9.6 (/opt/ros/kilted/share/rosidl_generator_cpp/cmake)
+[0.797s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.821s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.922s] -- Found moveit_msgs: 2.7.1 (/opt/ros/kilted/share/moveit_msgs/cmake)
+[1.280s] -- Found moveit_ros_planning_interface: 2.14.1 (/opt/ros/kilted/share/moveit_ros_planning_interface/cmake)
+[1.432s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[1.468s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.588s] -- Found parameter_traits: 0.6.0 (/opt/ros/kilted/share/parameter_traits/cmake)
+[1.660s] -- Found rmw_implementation_cmake: 7.8.2 (/opt/ros/kilted/share/rmw_implementation_cmake/cmake)
+[1.664s] -- Found rmw_fastrtps_cpp: 9.3.3 (/opt/ros/kilted/share/rmw_fastrtps_cpp/cmake)
+[1.771s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.784s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.907s] -- Found rclcpp_lifecycle: 29.5.6 (/opt/ros/kilted/share/rclcpp_lifecycle/cmake)
+[1.992s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: random 
+[2.158s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.158s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.985s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[3.238s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[3.398s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[3.592s] -- Found moveit_visual_tools: 4.1.2 (/opt/ros/kilted/share/moveit_visual_tools/cmake)
+[3.977s] -- Setting OGRE_DIR to: '/opt/ros/kilted/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[3.983s] -- Found OGRE
+[3.983s] --   static     : OFF
+[3.983s] --   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[3.983s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[3.983s] --   media      : /opt/ros/kilted/opt/rviz_ogre_vendor/share/OGRE/Media
+[3.984s] -- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[3.984s] -- OGRE_LIBRARY_DIRS: /opt/ros/kilted/opt/rviz_ogre_vendor/lib
+[3.984s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[3.984s] -- OGRE_PLUGIN_DIR: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/OGRE
+[3.984s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[3.984s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[3.984s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[3.984s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[4.158s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[4.207s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[4.667s] -- Found X11: /usr/include   
+[4.675s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[4.958s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[4.958s] -- Looking for gethostbyname
+[5.256s] -- Looking for gethostbyname - found
+[5.256s] -- Looking for connect
+[5.558s] -- Looking for connect - found
+[5.558s] -- Looking for remove
+[5.806s] -- Looking for remove - found
+[5.813s] -- Looking for shmat
+[5.989s] -- Looking for shmat - found
+[5.989s] -- Looking for IceConnectionNumber in ICE
+[6.138s] -- Looking for IceConnectionNumber in ICE - found
+[6.170s] -- Setting yaml-cpp_DIR to: '/opt/ros/kilted/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[6.431s] [0mCMake Deprecation Warning at /opt/ros/kilted/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+[6.431s]   ament_target_dependencies() is deprecated.  Use target_link_libraries()
+[6.431s]   with modern CMake targets instead.  Try replacing this call with:
+[6.431s] 
+[6.431s]     target_link_libraries(moveit_interface PUBLIC
+[6.431s]       ${geometry_msgs_TARGETS}
+[6.432s]       ${interbotix_moveit_interface_msgs_TARGETS}
+[6.432s]       ${moveit_msgs_TARGETS}
+[6.432s]       moveit_ros_planning_interface::moveit_common_planning_interface_objects
+[6.432s]       moveit_ros_planning_interface::moveit_move_group_interface
+[6.432s]       moveit_ros_planning_interface::moveit_planning_scene_interface
+[6.432s]       moveit_visual_tools::moveit_visual_tools
+[6.432s]       rclcpp::rclcpp
+[6.432s]     )
+[6.432s] 
+[6.433s] Call Stack (most recent call first):
+[6.433s]   CMakeLists.txt:43 (ament_target_dependencies)
+[6.433s] 
+[6.433s] [0m
+[6.538s] -- Configuring done (6.5s)
+[6.593s] -- Generating done (0.0s)
+[6.603s] -- Build files have been written to: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface
+[6.628s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface' returned '0': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install
+[6.629s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface -- -j22 -l22
+[6.699s] [ 33%] [32mBuilding CXX object CMakeFiles/moveit_interface.dir/src/moveit_interface_obj.cpp.o[0m
+[6.702s] [ 66%] [32mBuilding CXX object CMakeFiles/moveit_interface.dir/src/moveit_interface.cpp.o[0m
+[10.843s] In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/interbotix_moveit_interface/moveit_interface_obj.hpp:38[m[K,
+[10.843s]                  from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface_obj.cpp:29[m[K:
+[10.844s] [01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[10.844s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[10.844s]       |                                                                             [01;36m[K^[m[K
+[11.783s] In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/interbotix_moveit_interface/moveit_interface_obj.hpp:38[m[K,
+[11.783s]                  from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface.cpp:29[m[K:
+[11.783s] [01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[11.784s]    51 | a message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[11.784s]       |                                                                       [01;36m[K^[m[K
+[11.784s] 
+[13.253s] In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/interbotix_moveit_interface/moveit_interface_obj.hpp:39[m[K:
+[13.253s] [01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[13.253s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[13.253s]       |                                                                             [01;36m[K^[m[K
+[13.976s] In file included from [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/interbotix_moveit_interface/moveit_interface_obj.hpp:39[m[K:
+[13.976s] [01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[13.976s]    50 | a message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[13.976s]       |                                                                       [01;36m[K^[m[K
+[13.976s] 
+[16.022s] [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface_obj.cpp:[m[K In member function ‘[01m[Kbool interbotix::InterbotixMoveItInterface::[01;32m[Kmoveit_plan_cartesian_path[m[K(std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >)[m[K’:
+[16.022s] [01m[K/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface_obj.cpp:204:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble moveit::planning_interface::MoveGroupInterface::[01;32m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)[m[K’ is deprecated: Drop jump_threshold [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[16.022s]   204 |   double fraction = [01;35m[Kmove_group->computeCartesianPath([m[K
+[16.022s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[16.022s]   205 | [01;35m[K    waypoints,[m[K
+[16.022s]       |     [01;35m[K~~~~~~~~~~[m[K                                       
+[16.022s]   206 | [01;35m[K    eef_step,[m[K
+[16.022s]       |     [01;35m[K~~~~~~~~~[m[K                                        
+[16.022s]   207 | [01;35m[K    jump_threshold,[m[K
+[16.022s]       |     [01;35m[K~~~~~~~~~~~~~~~[m[K                                  
+[16.023s]   208 | [01;35m[K    trajectory)[m[K;
+[16.023s]       |     [01;35m[K~~~~~~~~~~~[m[K                                      
+[16.023s] In file included from [01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[16.023s] [01m[K/opt/ros/kilted/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3:[m[K [01;36m[Knote: [m[Kdeclared here
+[16.023s]   765 |   [01;36m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+[16.023s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[26.554s] [100%] [32m[1mLinking CXX executable moveit_interface[0m
+[27.177s] [100%] Built target moveit_interface
+[27.191s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface' returned '0': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface -- -j22 -l22
+[27.192s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface
+[27.202s] -- Install configuration: "Release"
+[27.202s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/interbotix_moveit_interface/moveit_interface
+[27.203s] -- Set non-toolchain portion of runtime path of "/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/interbotix_moveit_interface/moveit_interface" to ""
+[27.203s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/interbotix_moveit_interface/moveit_interface_gui
+[27.203s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/package_run_dependencies/interbotix_moveit_interface
+[27.203s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/parent_prefix_path/interbotix_moveit_interface
+[27.203s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/environment/ament_prefix_path.sh
+[27.203s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/environment/ament_prefix_path.dsv
+[27.203s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/environment/path.sh
+[27.203s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/environment/path.dsv
+[27.204s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/local_setup.bash
+[27.204s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/local_setup.sh
+[27.204s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/local_setup.zsh
+[27.204s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/local_setup.dsv
+[27.204s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/package.dsv
+[27.204s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/packages/interbotix_moveit_interface
+[27.204s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/cmake/interbotix_moveit_interfaceConfig.cmake
+[27.204s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/cmake/interbotix_moveit_interfaceConfig-version.cmake
+[27.204s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_moveit_interface/package.xml
+[27.207s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface' returned '0': AMENT_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install:/opt/ros/kilted/opt/gz_sim_vendor:/opt/ros/kilted/opt/gz_sensors_vendor:/opt/ros/kilted/opt/gz_physics_vendor:/opt/ros/kilted/opt/sdformat_vendor:/opt/ros/kilted/opt/gz_gui_vendor:/opt/ros/kilted/opt/gz_transport_vendor:/opt/ros/kilted/opt/gz_rendering_vendor:/opt/ros/kilted/opt/gz_plugin_vendor:/opt/ros/kilted/opt/gz_fuel_tools_vendor:/opt/ros/kilted/opt/gz_msgs_vendor:/opt/ros/kilted/opt/gz_common_vendor:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_tools_vendor:/opt/ros/kilted/opt/gz_ogre_next_vendor:/opt/ros/kilted/opt/gz_dartsim_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_moveit_interface
