@@ -1,0 +1,84 @@
+-- Found ament_cmake: 2.7.4 (/opt/ros/kilted/share/ament_cmake/cmake)
+-- Found pluginlib: 5.6.2 (/opt/ros/kilted/share/pluginlib/cmake)
+-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+-- Found rclcpp: 29.5.6 (/opt/ros/kilted/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.9.6 (/opt/ros/kilted/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.9.6 (/opt/ros/kilted/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.8.2 (/opt/ros/kilted/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 9.3.3 (/opt/ros/kilted/share/rmw_fastrtps_cpp/cmake)
+-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rviz_common: 15.0.11 (/opt/ros/kilted/share/rviz_common/cmake)
+-- Setting OGRE_DIR to: '/opt/ros/kilted/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+-- Found OGRE
+--   static     : OFF
+--   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+--   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+--   media      : /opt/ros/kilted/opt/rviz_ogre_vendor/share/OGRE/Media
+-- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+-- OGRE_LIBRARY_DIRS: /opt/ros/kilted/opt/rviz_ogre_vendor/lib
+-- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+-- OGRE_PLUGIN_DIR: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/OGRE
+-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/libOgreMain.so
+-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/kilted/opt/rviz_ogre_vendor/lib/libOgreMain.so
+-- Setting yaml-cpp_DIR to: '/opt/ros/kilted/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+-- Found interbotix_xs_msgs: 0.0.0 (/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_msgs/cmake)
+[0mCMake Deprecation Warning at /opt/ros/kilted/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+  ament_target_dependencies() is deprecated.  Use target_link_libraries()
+  with modern CMake targets instead.  Try replacing this call with:
+
+    target_link_libraries(interbotix_xs_rviz PUBLIC
+      ${interbotix_xs_msgs_TARGETS}
+      pluginlib::pluginlib
+      rclcpp::rclcpp
+      rviz_common::rviz_common
+    )
+
+Call Stack (most recent call first):
+  CMakeLists.txt:57 (ament_target_dependencies)
+
+[0m
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_xs_rviz
+[  0%] Built target interbotix_xs_rviz_autogen_timestamp_deps
+[ 16%] [34m[1mAutomatic MOC for target interbotix_xs_rviz[0m
+[ 16%] Built target interbotix_xs_rviz_autogen
+[100%] Built target interbotix_xs_rviz
+-- Install configuration: "Release"
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/plugin_description.xml
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/libinterbotix_xs_rviz.so
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/include/
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/include//interbotix_xs_rviz
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/include//interbotix_xs_rviz/xs_register_descriptions.hpp
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/include//interbotix_xs_rviz/interbotix_control_panel.hpp
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz//icons
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz//icons/classes
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz//icons/classes/Interbotix Control Panel.png
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/environment/library_path.sh
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/environment/library_path.dsv
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/package_run_dependencies/interbotix_xs_rviz
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/parent_prefix_path/interbotix_xs_rviz
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/environment/ament_prefix_path.sh
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/environment/path.sh
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/environment/path.dsv
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/local_setup.bash
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/local_setup.sh
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/local_setup.zsh
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/local_setup.dsv
+-- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/package.dsv
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/packages/interbotix_xs_rviz
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/rviz_common__pluginlib__plugin/interbotix_xs_rviz
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/cmake/interbotix_xs_rvizExport.cmake
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/cmake/interbotix_xs_rvizExport-release.cmake
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/cmake/interbotix_xs_rvizConfig.cmake
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/cmake/interbotix_xs_rvizConfig-version.cmake
+-- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_xs_rviz/package.xml

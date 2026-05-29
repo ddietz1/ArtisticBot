@@ -1,0 +1,18 @@
+[1.187s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/ModernRobotics/packages/Python': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/modern_robotics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/modern_robotics build --build-base /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/modern_robotics/build install --record /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/modern_robotics/install.log --single-version-externally-managed
+[1.416s] running egg_info
+[1.437s] writing ../../../../build/modern_robotics/modern_robotics.egg-info/PKG-INFO
+[1.437s] writing dependency_links to ../../../../build/modern_robotics/modern_robotics.egg-info/dependency_links.txt
+[1.437s] writing requirements to ../../../../build/modern_robotics/modern_robotics.egg-info/requires.txt
+[1.437s] writing top-level names to ../../../../build/modern_robotics/modern_robotics.egg-info/top_level.txt
+[1.478s] reading manifest file '../../../../build/modern_robotics/modern_robotics.egg-info/SOURCES.txt'
+[1.478s] writing manifest file '../../../../build/modern_robotics/modern_robotics.egg-info/SOURCES.txt'
+[1.478s] running build
+[1.478s] running build_py
+[1.478s] running install
+[1.483s] running install_lib
+[1.503s] running install_egg_info
+[1.524s] removing '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages/modern_robotics-1.1.0-py3.12.egg-info' (and everything under it)
+[1.525s] Copying ../../../../build/modern_robotics/modern_robotics.egg-info to /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages/modern_robotics-1.1.0-py3.12.egg-info
+[1.525s] running install_scripts
+[1.645s] writing list of installed files to '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/modern_robotics/install.log'
+[1.665s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/ModernRobotics/packages/Python' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/modern_robotics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/modern_robotics build --build-base /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/modern_robotics/build install --record /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/modern_robotics/install.log --single-version-externally-managed

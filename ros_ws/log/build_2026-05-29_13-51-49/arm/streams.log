@@ -1,0 +1,28 @@
+[0.790s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/build --no-deps symlink_data
+[1.111s] running develop
+[1.344s] running egg_info
+[1.344s] creating arm.egg-info
+[1.365s] writing arm.egg-info/PKG-INFO
+[1.365s] writing dependency_links to arm.egg-info/dependency_links.txt
+[1.365s] writing entry points to arm.egg-info/entry_points.txt
+[1.365s] writing requirements to arm.egg-info/requires.txt
+[1.365s] writing top-level names to arm.egg-info/top_level.txt
+[1.365s] writing manifest file 'arm.egg-info/SOURCES.txt'
+[1.406s] reading manifest file 'arm.egg-info/SOURCES.txt'
+[1.407s] writing manifest file 'arm.egg-info/SOURCES.txt'
+[1.434s] running build_ext
+[1.434s] Creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/lib/python3.12/site-packages/arm.egg-link (link to .)
+[1.435s] Installing motion_planner script to /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/lib/arm
+[1.435s] 
+[1.435s] Installed /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm
+[1.435s] running symlink_data
+[1.435s] creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share
+[1.435s] creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/ament_index
+[1.435s] creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/ament_index/resource_index
+[1.435s] creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/ament_index/resource_index/packages
+[1.435s] symbolically linking /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/resource/arm -> /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/ament_index/resource_index/packages
+[1.436s] creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/arm
+[1.436s] creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/arm/launch
+[1.436s] symbolically linking /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/launch/launch.py -> /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/arm/launch
+[1.436s] symbolically linking /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/package.xml -> /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/arm
+[1.467s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/build --no-deps symlink_data

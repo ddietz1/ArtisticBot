@@ -1,0 +1,19 @@
+[0mCMake Deprecation Warning at /opt/ros/kilted/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+  ament_target_dependencies() is deprecated.  Use target_link_libraries()
+  with modern CMake targets instead.  Try replacing this call with:
+
+    target_link_libraries(interbotix_xs_ros_control PUBLIC
+      ${interbotix_xs_msgs_TARGETS}
+      ${sensor_msgs_TARGETS}
+      hardware_interface::hardware_interface
+      hardware_interface::mock_components
+      pluginlib::pluginlib
+      rclcpp::rclcpp
+      rclcpp_lifecycle::rclcpp_lifecycle
+      sensor_msgs::sensor_msgs_library
+    )
+
+Call Stack (most recent call first):
+  CMakeLists.txt:43 (ament_target_dependencies)
+
+[0m

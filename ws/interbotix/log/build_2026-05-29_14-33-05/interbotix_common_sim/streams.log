@@ -1,0 +1,43 @@
+[0.234s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_sim -- -j22 -l22
+[0.658s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_sim -- -j22 -l22
+[0.659s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_sim
+[0.669s] -- Install configuration: "Release"
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/VisionKit
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/VisionKit/stand.stl
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/VisionKit/model.config
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/VisionKit/VisionKit.sdf
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/TrossenRoboticsOfficeBuilding
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/TrossenRoboticsOfficeBuilding/model.config
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/TrossenRoboticsOfficeBuilding/TrossenRoboticsOfficeBuilding.sdf
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/RealSenseD415
+[0.670s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/RealSenseD415/model.config
+[0.671s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/RealSenseD415/RealSenseD415.sdf
+[0.671s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/models/RealSenseD415/camera.stl
+[0.671s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/worlds
+[0.671s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/worlds/interbotix.world
+[0.671s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/worlds/vision_kit.world
+[0.671s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/media
+[0.671s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/media/interbotix_black.png
+[0.671s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/media/materials
+[0.671s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/media/materials/scripts
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/media/materials/scripts/interbotix_texture.gazebo
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/media/materials/scripts/interbotix_black.material
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/media/materials/textures
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/media/materials/textures/interbotix_black.png
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/package_run_dependencies/interbotix_common_sim
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/parent_prefix_path/interbotix_common_sim
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/environment/ament_prefix_path.sh
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/environment/ament_prefix_path.dsv
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/environment/path.sh
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/environment/path.dsv
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/local_setup.bash
+[0.673s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/local_setup.sh
+[0.674s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/local_setup.zsh
+[0.674s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/local_setup.dsv
+[0.674s] -- Installing: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/package.dsv
+[0.674s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/ament_index/resource_index/packages/interbotix_common_sim
+[0.674s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/cmake/interbotix_common_simConfig.cmake
+[0.674s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/cmake/interbotix_common_simConfig-version.cmake
+[0.674s] -- Up-to-date: /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/share/interbotix_common_sim/package.xml
+[0.724s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_sim

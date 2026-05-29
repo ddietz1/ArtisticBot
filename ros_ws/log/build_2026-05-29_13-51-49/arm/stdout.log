@@ -1,0 +1,26 @@
+running develop
+running egg_info
+creating arm.egg-info
+writing arm.egg-info/PKG-INFO
+writing dependency_links to arm.egg-info/dependency_links.txt
+writing entry points to arm.egg-info/entry_points.txt
+writing requirements to arm.egg-info/requires.txt
+writing top-level names to arm.egg-info/top_level.txt
+writing manifest file 'arm.egg-info/SOURCES.txt'
+reading manifest file 'arm.egg-info/SOURCES.txt'
+writing manifest file 'arm.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/lib/python3.12/site-packages/arm.egg-link (link to .)
+Installing motion_planner script to /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/lib/arm
+
+Installed /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm
+running symlink_data
+creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share
+creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/ament_index
+creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/ament_index/resource_index
+creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/ament_index/resource_index/packages
+symbolically linking /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/resource/arm -> /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/ament_index/resource_index/packages
+creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/arm
+creating /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/arm/launch
+symbolically linking /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/launch/launch.py -> /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/arm/launch
+symbolically linking /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/build/arm/package.xml -> /home/derek-dietz/MSAI/ComputerVision/Final_Project/ros_ws/install/arm/share/arm

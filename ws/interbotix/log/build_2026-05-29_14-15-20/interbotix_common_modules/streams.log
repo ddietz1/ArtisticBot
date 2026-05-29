@@ -1,0 +1,19 @@
+[1.164s] Invoking command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_common_modules': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_modules/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/interbotix_common_modules build --build-base /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_modules/build install --record /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_modules/install.log --single-version-externally-managed install_data
+[1.451s] running egg_info
+[1.476s] writing ../../../../build/interbotix_common_modules/interbotix_common_modules.egg-info/PKG-INFO
+[1.476s] writing dependency_links to ../../../../build/interbotix_common_modules/interbotix_common_modules.egg-info/dependency_links.txt
+[1.477s] writing requirements to ../../../../build/interbotix_common_modules/interbotix_common_modules.egg-info/requires.txt
+[1.477s] writing top-level names to ../../../../build/interbotix_common_modules/interbotix_common_modules.egg-info/top_level.txt
+[1.523s] reading manifest file '../../../../build/interbotix_common_modules/interbotix_common_modules.egg-info/SOURCES.txt'
+[1.524s] writing manifest file '../../../../build/interbotix_common_modules/interbotix_common_modules.egg-info/SOURCES.txt'
+[1.524s] running build
+[1.524s] running build_py
+[1.524s] running install
+[1.528s] running install_lib
+[1.558s] running install_data
+[1.558s] running install_egg_info
+[1.584s] removing '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages/interbotix_common_modules-0.0.0-py3.12.egg-info' (and everything under it)
+[1.584s] Copying ../../../../build/interbotix_common_modules/interbotix_common_modules.egg-info to /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages/interbotix_common_modules-0.0.0-py3.12.egg-info
+[1.584s] running install_scripts
+[1.706s] writing list of installed files to '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_modules/install.log'
+[1.730s] Invoked command in '/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_common_modules' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_modules/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/install/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/interbotix_common_modules build --build-base /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_modules/build install --record /home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/build/interbotix_common_modules/install.log --single-version-externally-managed install_data
