@@ -6,8 +6,8 @@ from scipy.spatial.transform import Rotation as R
 
 from std_srvs.srv import Empty
 
-from geometry_msgs.msg import Point, Pose, PoseStamped, Quaternion, Transform
-
+from geometry_msgs.msg import Point, Pose, PoseStamped, PolygonStamped
+from nav_msgs.msg import Path
 from interbotix_xs_modules.xs_robot.arm import InterbotixManipulatorXS
 
 import numpy as np
@@ -30,8 +30,8 @@ class MotionPlanning:
         # global variables
 
         # workspace bounds
-        self.x_min, self.x_max = 0.15, 0.35
-        self.y_min, self.y_max = -0.15, 0.15
+        self.x_min, self.x_max = 0.20, 0.26
+        self.y_min, self.y_max = -0.06, 0.06
         self.z = 0.1                    # fixed for now
         self.moving = False
 
@@ -51,6 +51,12 @@ class MotionPlanning:
             Pose,
             '/vision/coordinate',
             self.coordinate_cb,
+            10
+        )
+
+        self.display_pub = self.node.create_publisher(
+            Path,
+            '/shape_visual',
             10
         )
 
@@ -107,12 +113,34 @@ class MotionPlanning:
     def queue_cb(self):
         """Processes points from the vision pipeline."""
 
+        now = self.node.get_clock().now().to_msg()
         # if empty just return
         if not self.point_queue:
             self.moving = False
             return
         
+        # draw the shape in rviz
+        polygon_points = []
+        for p in self.point_queue:
+            # make each a pose stamped
+            pose = PoseStamped()
+            x, y = self.pixel_to_robot(p.x, p.y)
+            pose.pose.position.x = x
+            pose.pose.position.y = y
+            pose.pose.position.z = 0.1
+            pose.pose.orientation.w = 1.0
+            pose.header.frame_id =  'px100/base_link'
+            pose.header.stamp = now
+            polygon_points.append(pose)
+
+        poly = Path()
+        poly.poses = polygon_points
+        poly.header.frame_id =  'px100/base_link'
+        poly.header.stamp = now
+        self.display_pub.publish(poly)
+
         p = self.point_queue.popleft()
+        self.node.get_logger().info(f"point in the queue: x={p.x}, y={p.y}")
         x, y = self.pixel_to_robot(p.x, p.y)
 
         self.node.get_logger().info(f"sending robot to point: x={x:.3f}, y={y:.3f}")
@@ -159,8 +187,8 @@ class MotionPlanning:
         """Transform pixels from vision pipeline to robot coordinates."""
 
         # pixels arrive normalized
-        x = self.x_max - v * (self.x_max - self.x_min)
-        y = self.y_max - u * (self.y_max - self.y_min) * 2
+        x = self.x_min + (1.0 - v) * (self.x_max - self.x_min)
+        y = self.y_min + (1.0 - u) * (self.y_max - self.y_min)
 
         return x, y
 
