@@ -29,6 +29,7 @@ setup(
     entry_points={
         'console_scripts': [
             'motion_planner = arm.motionPlanning:main',
+            'vision_node = arm.vision:main',
         ],
     },
 )

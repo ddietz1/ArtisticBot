@@ -21,4 +21,9 @@ def generate_launch_description():
         executable='motion_planner',
     )
 
+    motion_planner = Node(
+        package='arm',
+        executable='vision_node',
+    )
+
     return LaunchDescription([xsarm, motion_planner])

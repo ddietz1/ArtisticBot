@@ -12,15 +12,26 @@ from interbotix_xs_modules.xs_robot.arm import InterbotixManipulatorXS
 
 import numpy as np
 
+from collections import deque
+
+from arm_interfaces.msg import Pixels
+
 class MotionPlanning:
     """Motion Planning Node."""
 
     def __init__(self, bot: InterbotixManipulatorXS):
         self.node = bot.core.robot_node
         # global variables
+
+        # workspace bounds
+        self.x_min, self.x_max = 0.15, 0.35
+        self.y_min, self.y_max = -0.15, 0.15
+        self.z = 0.1                    # fixed for now
         self.moving = False
 
         self.bot = bot
+
+        self.point_queue = deque()
 
         # self.bot.arm.set_ee_pose_components(x=0.3, y=0.0, z=0.1)
 
@@ -28,6 +39,8 @@ class MotionPlanning:
         # To test, we will subscribe to a coordinate topic like Point or PoseStamped and move the arm to the first point
 
         # Create subscribers
+
+        # for testing
         self.node.create_subscription(
             Pose,
             '/vision/coordinate',
@@ -35,9 +48,22 @@ class MotionPlanning:
             10
         )
 
+        # from vision pipeline
+        self.node.create_subscription(
+            Point,
+            '/vision/points',
+            self.pixel_cb,
+            10               # probably fix this, reliable?
+        )
+
         self.timer = self.node.create_timer(
             0.5,
             self.timer_cb
+        )
+
+        self.point_timer = self.node.create_timer(
+            2.5,
+            self.queue_cb
         )
 
         # Create services
@@ -72,15 +98,36 @@ class MotionPlanning:
         self.bot.arm.go_to_home_pose()
         self.timer.cancel()
 
+    def queue_cb(self):
+        """Processes points from the vision pipeline."""
+
+        # if empty just return
+        if not self.point_queue:
+            self.moving = False
+            return
+        
+        p = self.point_queue.popleft()
+        x, y = self.pixel_to_robot(p.x, p.y)
+
+        self.node.get_logger(f"sending robot to point: x={x:.3f}, y={y:.3f}")
+        self.bot.arm.set_ee_pose_components(x=x, y=y, z=0.1)
+        self.moving = True
+
     def coordinate_cb(self, msg: Pose):
         """Takes in coordinates from the vision pipeline and stores them."""
 
-        # if msg.orientation:
-        #     self.move_arm(coordinate=msg, translate_only=False)
-        # else:
-        #     self.move_arm(coordinate=msg, translate_only=True)
         self.node.get_logger().info('Received coordinate!')
         self.move_arm(coordinate=msg)
+
+    def pixel_cb(self, msg: Pixels):
+        """Recieved points from the vision pipeline."""
+
+        self.point_queue.clear()
+        # pixels is a list of points
+        for p in msg.points:
+            self.point_queue.append(p)
+        self.node.get_logger().info(f'Queued {len(self.point_queue)} points')
+
 
     def move_arm(self, coordinate: Pose, translate_only=True):
         """Moves the arm to a specified coordinate
@@ -101,6 +148,15 @@ class MotionPlanning:
 
         if translate_only:
             self.bot.arm.set_ee_pose_components(x=x, y=y, z=z)
+
+    def pixel_to_robot(self, u, v):
+        """Transform pixels from vision pipeline to robot coordinates."""
+
+        # pixels arrive normalized
+        x = self.x_max - v * (self.x_max - self.x_min)
+        y = self.y_max - u * (self.y_max - self.y_min) * 2
+
+        return x, y
 
     def open_gripper(self, request, response):
         """close the gripper."""
