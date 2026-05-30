@@ -12,7 +12,7 @@ def generate_launch_description():
         ]),
         launch_arguments={
             'robot_model': 'px100',
-            'use_sim': 'true',
+            'use_sim': 'false',
         }.items()
     )
 

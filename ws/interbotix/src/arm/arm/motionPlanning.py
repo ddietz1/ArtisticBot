@@ -30,9 +30,11 @@ class MotionPlanning:
         # global variables
 
         # workspace bounds
-        self.x_min, self.x_max = 0.20, 0.26
-        self.y_min, self.y_max = -0.06, 0.06
+        self.x_min, self.x_max = 0.15, 0.25
+        self.y_min, self.y_max = -0.15, 0.15
         self.z = 0.1                    # fixed for now
+        self.z_travel = 0.18
+        self.z_draw = 0.08
         self.moving = False
 
         self.bot = bot
@@ -144,7 +146,10 @@ class MotionPlanning:
         x, y = self.pixel_to_robot(p.x, p.y)
 
         self.node.get_logger().info(f"sending robot to point: x={x:.3f}, y={y:.3f}")
-        self.bot.arm.set_ee_pose_components(x=x, y=y, z=0.1)
+        self.bot.arm.set_ee_pose_components(x=x, y=y, z=self.z_travel)
+        self.bot.arm.set_ee_pose_components(x=x, y=y, z=self.z_draw)
+        self.bot.arm.set_ee_pose_components(x=x, y=y, z=self.z_travel)
+
         self.moving = True
 
     def coordinate_cb(self, msg: Pose):
@@ -229,6 +234,8 @@ def main(args=None):
         robot_model="px100",
         group_name="arm",
         gripper_name="gripper",
+        moving_time=1.5,
+        # accel_time=0.1,
         node=global_node,
     )
 
