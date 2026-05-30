@@ -29,7 +29,7 @@ class VisionNode(Node):
         )
 
     def detect_coords(self):
-        img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'hexagon.png')
+        img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'smiley_face.png')
         image = cv2.imread(img_path)
         h, w = image.shape[:2]
 
