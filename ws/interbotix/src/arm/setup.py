@@ -28,7 +28,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'mymotion_planner = arm.motionPlanning:main',
+            'motion_planner = arm.motionPlanning:main',
         ],
     },
 )

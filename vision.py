@@ -11,6 +11,7 @@ edges = cv2.Canny(img_gray, 30, 200)
 contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 approx = cv2.approxPolyDP(contours[0], 0.01, closed=True)
 print(f'contour len:{len(contours[0])}, approx len:{len(approx)}')
+print(f'Limited contours: {approx}')
 
 cv2.imshow('Canny Edges after contouring', edges)
 
