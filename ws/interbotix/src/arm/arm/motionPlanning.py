@@ -16,6 +16,12 @@ from collections import deque
 
 from arm_interfaces.msg import Pixels
 
+from interbotix_common_modules.common_robot.robot import (
+    create_interbotix_global_node,
+    robot_startup,
+    robot_shutdown
+)
+
 class MotionPlanning:
     """Motion Planning Node."""
 
@@ -50,7 +56,7 @@ class MotionPlanning:
 
         # from vision pipeline
         self.node.create_subscription(
-            Point,
+            Pixels,
             '/vision/points',
             self.pixel_cb,
             10               # probably fix this, reliable?
@@ -109,7 +115,7 @@ class MotionPlanning:
         p = self.point_queue.popleft()
         x, y = self.pixel_to_robot(p.x, p.y)
 
-        self.node.get_logger(f"sending robot to point: x={x:.3f}, y={y:.3f}")
+        self.node.get_logger().info(f"sending robot to point: x={x:.3f}, y={y:.3f}")
         self.bot.arm.set_ee_pose_components(x=x, y=y, z=0.1)
         self.moving = True
 
@@ -187,11 +193,30 @@ class MotionPlanning:
         return response
 
 def main(args=None):
-    rclpy.init(args=args)
-    bot = InterbotixManipulatorXS("px100", "arm", "gripper")
+    # Create global node first
+    global_node = create_interbotix_global_node()
+
+    # Pass it to the bot
+    bot = InterbotixManipulatorXS(
+        robot_model="px100",
+        group_name="arm",
+        gripper_name="gripper",
+        node=global_node,
+    )
+
+    # Create your class, attach subscriptions/services to global_node
     mp = MotionPlanning(bot)
-    rclpy.spin(bot.core.robot_node)
-    rclpy.shutdown()
+
+    # Start the executor — callbacks fire from here
+    robot_startup(global_node)
+
+    try:
+        while rclpy.ok():
+            pass
+    except KeyboardInterrupt:
+        pass
+    finally:
+        robot_shutdown(global_node)
 
 
 

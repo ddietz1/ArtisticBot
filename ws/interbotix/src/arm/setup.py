@@ -13,6 +13,8 @@ setup(
             ['resource/' + package_name]),
         (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('lib', 'python3.12', 'site-packages', package_name), 
+        glob('arm/*.png')),
     ],
     package_data={'': ['py.typed']},
     install_requires=['setuptools'],
@@ -28,7 +30,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'motion_planner = arm.motionPlanning:main',
+            'arm_coordinator = arm.motionPlanning:main',
             'vision_node = arm.vision:main',
         ],
     },

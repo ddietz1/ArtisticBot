@@ -1,10 +1,12 @@
 """Vision Pipeline"""
 
 import rclpy
+import os
 from rclpy.node import Node
 from geometry_msgs.msg import Point
 import cv2
 import numpy as np
+from time import sleep
 
 from arm_interfaces.msg import Pixels
 
@@ -21,13 +23,15 @@ class VisionNode(Node):
 
         # run detection once on init and publish
         coords = self.detect_coords()
+        sleep(3)
         if coords is not None:
             self.publish_coords(coords)
 
     def detect_coords(self):
-        image = cv2.imread("triangle.png")
+        img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'triangle.png')
+        image = cv2.imread(img_path)
         if image is None:
-            self.get_logger().error("Could not load triangle.png")
+            self.get_logger().error(f"Could not load image at {img_path}")
             return None
 
         img_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
