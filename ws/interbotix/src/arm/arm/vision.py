@@ -36,26 +36,51 @@ class VisionNode(Node):
         img_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         
         # threshold instead of Canny — more reliable for simple shapes
-        _, thresh = cv2.threshold(img_gray, 127, 255, cv2.THRESH_BINARY_INV)
-        
-        contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        
-        # filter out contours that are too large (image border)
-        contours = [c for c in contours if cv2.contourArea(c) < 0.9 * w * h]
-        
-        # pick largest remaining
-        contours = sorted(contours, key=cv2.contourArea, reverse=True)
-        
-        if not contours:
-            self.get_logger().error('No valid contours found')
-            return None
+        _, thresh = cv2.threshold(img_gray, 50, 255, cv2.THRESH_BINARY_INV)
 
-        epsilon = 0.02 * cv2.arcLength(contours[0], True)
-        approx = cv2.approxPolyDP(contours[0], epsilon, closed=True)
+        # Skeletonization (Crush lines to 1 pixel wide)
+        skeleton = cv2.ximgproc.thinning(thresh)
+        
+        contours, _ = cv2.findContours(skeleton, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+        
+        # Simplify the paths (Reduce the dots)
+        dot_spacing = 1 # This is the min distance between points in the final path.
+        target_dot_count = 200
+        total_dots = float('inf')
+        
+        # Loop through contours and keep only every nth point until there are a 
+        # resonable number of points for the robot to draw
+        while total_dots > target_dot_count:
+            robot_paths = []
 
-        coords = [(pt[0][0] / w, pt[0][1] / h) for pt in approx]
+            for contour in contours:
+                # Filter out tiny specks so the robot doesn't draw random dots
+                if len(contour) > dot_spacing: 
+                    spaced_points = contour[::dot_spacing]  # Take every nth point
+                    robot_paths.append(spaced_points)
+
+            total_dots = sum(len(path) for path in robot_paths)
+            if total_dots > target_dot_count:
+                dot_spacing += 1 
+
+        # Create a blank black canvas to preview the robot's paths
+        preview = np.zeros_like(image)
+        coords = []
+
+        for dot_path in robot_paths:
+            for point in dot_path:
+                x, y = point[0]
+                # Draw green dots for the robot to follow
+                cv2.circle(preview, (x, y), 3, (0, 255, 0), -1)
+
+                # Normalize the coodrinate 
+                coords.append((float(x) / w, float(y) / h))
+        cv2.imshow('Dots', preview)
+        cv2.waitKey(0) 
+
         self.get_logger().info(f'Detected {len(coords)} vertices: {coords}')
-        coords.append(coords[0])  # close the shape
+        if coords:
+            coords.append(coords[0])  # close the shape
         return coords
 
     def publish_coords(self, coords):
