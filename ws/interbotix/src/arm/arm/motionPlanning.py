@@ -2,6 +2,8 @@ import rclpy
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from rclpy.node import Node
 
+import time
+
 from scipy.spatial.transform import Rotation as R
 
 from std_srvs.srv import Empty
@@ -30,16 +32,20 @@ class MotionPlanning:
         # global variables
 
         # workspace bounds
-        self.x_min, self.x_max = 0.15, 0.25
-        self.y_min, self.y_max = -0.15, 0.15
-        self.z = 0.1                    # fixed for now
-        self.z_travel = 0.18
-        self.z_draw = 0.08
+        # self.x_min, self.x_max = 0.17, 0.27
+        # self.y_min, self.y_max = -0.15, 0.15
+        self.x_min, self.x_max = 0.25, 0.5  
+        self.y_min, self.y_max = -0.20, 0.20 
+        self.z = 0.1          
+        self.node.declare_parameter('z_travel', 0.12)
+        self.node.declare_parameter('z_draw', 0.088)
         self.moving = False
 
         self.bot = bot
 
         self.point_queue = deque()
+
+        self.drawing_group = MutuallyExclusiveCallbackGroup()
 
         # self.bot.arm.set_ee_pose_components(x=0.3, y=0.0, z=0.1)
 
@@ -77,7 +83,8 @@ class MotionPlanning:
 
         self.point_timer = self.node.create_timer(
             2.5,
-            self.queue_cb
+            self.queue_cb,
+            callback_group=self.drawing_group
         )
 
         # Create services
@@ -114,6 +121,10 @@ class MotionPlanning:
 
     def queue_cb(self):
         """Processes points from the vision pipeline."""
+
+        # update z value parameters
+        self.z_travel = self.node.get_parameter('z_travel').get_parameter_value().double_value
+        self.z_draw = self.node.get_parameter('z_draw').get_parameter_value().double_value
 
         now = self.node.get_clock().now().to_msg()
         # if empty just return
@@ -192,8 +203,19 @@ class MotionPlanning:
         """Transform pixels from vision pipeline to robot coordinates."""
 
         # pixels arrive normalized
-        x = self.x_min + (1.0 - v) * (self.x_max - self.x_min)
-        y = self.y_min + (1.0 - u) * (self.y_max - self.y_min)
+        # x = self.x_min + (1.0 - v) * (self.x_max - self.x_min)
+        # y = self.y_min + (1.0 - u) * (self.y_max - self.y_min)
+
+        ws_x_span = self.x_max - self.x_min
+        ws_y_span = self.y_max - self.y_min
+
+        draw_size = min(ws_x_span, ws_y_span)
+
+        x_center = (self.x_min + self.x_max) / 2.0
+        y_center = (self.y_min + self.y_max) / 2.0
+
+        x = x_center + (0.5 - v) * draw_size
+        y = y_center + (0.5 - u) * draw_size
 
         return x, y
 
@@ -231,11 +253,12 @@ def main(args=None):
 
     # Pass it to the bot
     bot = InterbotixManipulatorXS(
-        robot_model="px100",
+        robot_model="wx200",#"px100",
         group_name="arm",
         gripper_name="gripper",
         moving_time=1.5,
-        # accel_time=0.1,
+        accel_time=0.1,
+        gripper_pressure=1.0, 
         node=global_node,
     )
 
@@ -247,7 +270,7 @@ def main(args=None):
 
     try:
         while rclpy.ok():
-            pass
+            time.sleep(0.1)
     except KeyboardInterrupt:
         pass
     finally:

@@ -67,14 +67,20 @@ class VisionNode(Node):
         preview = np.zeros_like(image)
         coords = []
 
+        max_dim = max(w, h)
+        x_offset = (max_dim - w) / 2.0
+        y_offset = (max_dim - h) / 2.0
+
         for dot_path in robot_paths:
             for point in dot_path:
                 x, y = point[0]
                 # Draw green dots for the robot to follow
                 cv2.circle(preview, (x, y), 3, (0, 255, 0), -1)
 
-                # Normalize the coodrinate 
-                coords.append((float(x) / w, float(y) / h))
+                # Normalize the coordinates 
+                u = (float(x) + x_offset) / max_dim
+                v = (float(y) + y_offset) / max_dim
+                coords.append((u, v))
         cv2.imshow('Dots', preview)
         cv2.waitKey(0) 
 
