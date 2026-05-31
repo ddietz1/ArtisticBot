@@ -4,6 +4,8 @@ import cv2
 import numpy as np
 import pyrealsense2 as rs
 
+
+
 # Set up the realsense camera
 pipeline = rs.pipeline()
 config = rs.config()
@@ -35,19 +37,11 @@ try:
         edges = cv2.Canny(img_gray, t_lower, t_upper,
                           apertureSize=aperture_size, L2gradient=L2Gradient)
 
-        contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+        contours, hierarchy = cv2.findContours(edges, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 
         if contours:
-            largest_contour = max(contours, key=cv2.contourArea)
-
-            epsilon = 1
-            approx = cv2.approxPolyDP(largest_contour, epsilon, closed=True)
-
-            print(f'contour len:{len(largest_contour)}, approx len:{len(approx)}')
-            print(f'Limited contours: {approx}')
-
-            cv2.drawContours(image, [largest_contour], -1, (255, 0, 0), 3)
-            cv2.drawContours(image, [approx], -1, (0, 0, 255), 3)
+             
+            cv2.drawContours(image, contours, -1, (255, 0, 0), 3)
 
         cv2.imshow('Canny Edges', edges)
         cv2.imshow('Contours', image)
