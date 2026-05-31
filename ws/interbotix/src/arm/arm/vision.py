@@ -38,6 +38,9 @@ class VisionNode(Node):
         # threshold instead of Canny — more reliable for simple shapes
         _, thresh = cv2.threshold(img_gray, 50, 255, cv2.THRESH_BINARY_INV)
 
+        # Add border to prevent edge artifacts during skeletonization
+        thresh = cv2.copyMakeBorder(thresh, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=0)
+
         # Skeletonization (Crush lines to 1 pixel wide)
         skeleton = cv2.ximgproc.thinning(thresh)
         
