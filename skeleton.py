@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load the image and convert to grayscale
-image = cv2.imread('popeye.jpg')
+image = cv2.imread('smiley_face.png')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Thresholding
@@ -13,6 +13,8 @@ upper_threshold = 255
 _, binary = cv2.threshold(gray, lower_threshold, upper_threshold, 
                           cv2.THRESH_BINARY_INV)
 
+binary = cv2.copyMakeBorder(binary, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=0)
+
 # Skeletonization (Crush lines to 1 pixel wide)
 skeleton = cv2.ximgproc.thinning(binary)
 
@@ -21,7 +23,7 @@ contours, _ = cv2.findContours(skeleton, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 
 # Simplify the paths (Reduce the dots)
 dot_spacing = 1 # This is the min distance between points in the final path.
-target_dot_count = 200
+target_dot_count = 300
 total_dots = float('inf')
 
 # Loop through contours and keep only every nth point until there are a 
@@ -37,7 +39,7 @@ while total_dots > target_dot_count:
     total_dots = sum(len(path) for path in robot_paths)
     if total_dots > target_dot_count:
         dot_spacing += 1 
-
+print(f"Dot spacing: {dot_spacing}, Total dots for robot to draw: {total_dots}")
 # Create a blank black canvas to preview the robot's paths
 preview = np.zeros_like(image)
 
