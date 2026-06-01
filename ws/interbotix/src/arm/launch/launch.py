@@ -11,7 +11,7 @@ def generate_launch_description():
             '/launch/xsarm_control.launch.py'
         ]),
         launch_arguments={
-            'robot_model': 'px100',
+            'robot_model': 'wx200', #'px100',
             'use_sim': 'false',
         }.items()
     )
