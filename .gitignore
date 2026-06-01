@@ -1,6 +1,8 @@
-devel/
-logs/
-log/
+# ROS build artifacts
 build/
-bin/
-lib/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc

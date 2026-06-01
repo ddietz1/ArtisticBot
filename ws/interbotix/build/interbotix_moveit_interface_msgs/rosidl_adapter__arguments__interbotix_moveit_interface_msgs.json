@@ -1,6 +1,0 @@
-{
-  "package_name": "interbotix_moveit_interface_msgs",
-  "non_idl_tuples": [
-    "/home/derek-dietz/MSAI/ComputerVision/Final_Project/ws/interbotix/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface_msgs:srv/MoveItPlan.srv"
-  ]
-}
