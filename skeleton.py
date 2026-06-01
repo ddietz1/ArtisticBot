@@ -1,8 +1,9 @@
 import cv2
 import numpy as np
+import math
 
 # Load the image and convert to grayscale
-image = cv2.imread('smiley_face.png')
+image = cv2.imread('popeye.jpg')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Thresholding
@@ -19,38 +20,74 @@ binary = cv2.copyMakeBorder(binary, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=0
 skeleton = cv2.ximgproc.thinning(binary)
 
 # Find Contours (Create the robot paths)
-contours, _ = cv2.findContours(skeleton, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+# contours, _ = cv2.findContours(skeleton, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 
-# Simplify the paths (Reduce the dots)
-dot_spacing = 1 # This is the min distance between points in the final path.
-target_dot_count = 300
-total_dots = float('inf')
+y_coords, x_coords = np.where(skeleton > 0)
+unvisited_points = list(zip(x_coords, y_coords))
 
-# Loop through contours and keep only every nth point until there are a 
-# resonable number of points for the robot to draw
-while total_dots > target_dot_count:
-    robot_paths = []
-    for contour in contours:
-        # Filter out tiny specks so the robot doesn't draw random dots
-        if len(contour) > dot_spacing: 
-            spaced_points = contour[::dot_spacing]  # Take every nth point
-            robot_paths.append(spaced_points)
+robot_paths = []
+current_path = []
 
-    total_dots = sum(len(path) for path in robot_paths)
-    if total_dots > target_dot_count:
-        dot_spacing += 1 
-print(f"Dot spacing: {dot_spacing}, Total dots for robot to draw: {total_dots}")
-# Create a blank black canvas to preview the robot's paths
+# --- TUNING PARAMETERS ---
+target_spacing = 20.0  # Physical distance between dots (in pixels)
+pen_up_distance = 30.0 # If the next dot is this far away, start a new path
+# -------------------------
+
+if unvisited_points:
+    # Start the first path with the very first pixel we found
+    current_point = unvisited_points.pop(0)
+    current_path.append(current_point)
+
+    while unvisited_points:
+        # Convert to numpy arrays for fast distance math
+        pts_array = np.array(unvisited_points)
+        curr_array = np.array(current_point)
+        
+        # Calculate straight-line distance from our current point to ALL remaining points
+        distances = np.linalg.norm(pts_array - curr_array, axis=1)
+        
+        # Find the index of the closest point
+        closest_idx = np.argmin(distances)
+        closest_dist = distances[closest_idx]
+        closest_point = unvisited_points[closest_idx]
+
+        # Scenario A: The gap is huge. Lift the pen and start a new stroke.
+        if closest_dist > pen_up_distance:
+            robot_paths.append(current_path) # Save the finished stroke
+            current_path = []                # Reset
+            current_point = unvisited_points.pop(closest_idx)
+            current_path.append(current_point)
+            continue
+
+        # Scenario B: The point is far enough away to drop a dot based on our spacing rule.
+        if closest_dist >= target_spacing:
+            current_path.append(closest_point)
+            current_point = unvisited_points.pop(closest_idx) # Move our current location
+        
+        # Scenario C: The point is too close. 
+        else:
+            # We don't drop a dot, but we remove it from the unvisited list 
+            # so we don't get stuck in an infinite loop checking it.
+            # Notice we do NOT update `current_point`, so we keep measuring 
+            # from our last successfully placed dot!
+            unvisited_points.pop(closest_idx)
+
+    # Don't forget to save the very last path when the loop finishes
+    if current_path:
+        robot_paths.append(current_path)
+
+# --- PREVIEW CODE ---
 preview = np.zeros_like(image)
+total_dots = 0
 
 for dot_path in robot_paths:
+    # Draw paths with alternating colors to easily see where the pen lifts
+    color = tuple(np.random.randint(50, 255, 3).tolist()) 
     for point in dot_path:
-        x, y = point[0]
-        # Draw green dots for the robot to follow
-        cv2.circle(preview, (x, y), 3, (0, 255, 0), -1) 
+        cv2.circle(preview, point, 2, color, -1)
+        total_dots += 1
         
-print(f"Total dots for robot to draw: {sum(len(path) for path in robot_paths)}")
-cv2.imshow('1. Original Binary', binary)
-cv2.imshow('2. Skeleton (1-pixel wide)', skeleton)
-cv2.imshow('3. Final Robot Paths', preview)
+print(f"Total dots for robot to draw: {total_dots}")
+cv2.imshow('Robot Paths (Nearest Neighbor)', preview)
 cv2.waitKey(0)
+cv2.destroyAllWindows()
