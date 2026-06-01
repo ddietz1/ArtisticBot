@@ -16,14 +16,14 @@ def generate_launch_description():
         }.items()
     )
 
-    motion_planner = Node(
+    arm_coordinator = Node(
         package='arm',
-        executable='motion_planner',
+        executable='arm_coordinator',
     )
 
-    motion_planner = Node(
+    vision_node = Node(
         package='arm',
         executable='vision_node',
     )
 
-    return LaunchDescription([xsarm, motion_planner])
+    return LaunchDescription([xsarm, arm_coordinator, vision_node])
