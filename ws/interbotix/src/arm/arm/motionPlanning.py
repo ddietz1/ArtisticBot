@@ -31,13 +31,15 @@ class MotionPlanning:
         self.node = bot.core.robot_node
         # global variables
 
-        # workspace bounds
+        # workspace bounds for pincherx
         # self.x_min, self.x_max = 0.17, 0.27
         # self.y_min, self.y_max = -0.15, 0.15
-        self.x_min, self.x_max = 0.25, 0.5  
-        self.y_min, self.y_max = -0.20, 0.20 
+
+        # workspace bounds for wx200
+        self.x_min, self.x_max = 0.26, 0.41  
+        self.y_min, self.y_max = -0.15, 0.15
         self.z = 0.1          
-        self.node.declare_parameter('z_travel', 0.12)
+        self.node.declare_parameter('z_travel', 0.15)
         self.node.declare_parameter('z_draw', 0.088)
         self.moving = False
 
@@ -157,9 +159,16 @@ class MotionPlanning:
         x, y = self.pixel_to_robot(p.x, p.y)
 
         self.node.get_logger().info(f"sending robot to point: x={x:.3f}, y={y:.3f}")
-        self.bot.arm.set_ee_pose_components(x=x, y=y, z=self.z_travel)
-        self.bot.arm.set_ee_pose_components(x=x, y=y, z=self.z_draw)
-        self.bot.arm.set_ee_pose_components(x=x, y=y, z=self.z_travel)
+
+        # down_pitch = np.pi/2 
+
+        success = self.bot.arm.set_ee_pose_components(x=x, y=y, z=self.z_travel)
+        
+        if success:
+            self.bot.arm.set_ee_pose_components(x=x, y=y, z=self.z_draw)
+            self.bot.arm.set_ee_pose_components(x=x, y=y, z=self.z_travel)
+        else:
+            self.node.get_logger().warn(f"Point out of reach! Skipping x={x:.3f}, y={y:.3f}")
 
         self.moving = True
 
@@ -194,17 +203,13 @@ class MotionPlanning:
         y = coordinate.position.y
         z = coordinate.position.z
         q = coordinate.orientation
-        self.node.get_logger().info(f'Moving to x={x}, y={y}, z={z}')  # add this
+        self.node.get_logger().info(f'Moving to x={x}, y={y}, z={z}') 
 
         if translate_only:
             self.bot.arm.set_ee_pose_components(x=x, y=y, z=z)
 
     def pixel_to_robot(self, u, v):
         """Transform pixels from vision pipeline to robot coordinates."""
-
-        # pixels arrive normalized
-        # x = self.x_min + (1.0 - v) * (self.x_max - self.x_min)
-        # y = self.y_min + (1.0 - u) * (self.y_max - self.y_min)
 
         ws_x_span = self.x_max - self.x_min
         ws_y_span = self.y_max - self.y_min
@@ -264,7 +269,9 @@ def main(args=None):
 
     # Create your class, attach subscriptions/services to global_node
     mp = MotionPlanning(bot)
-
+        # pixels arrive normalized
+        # x = self.x_min + (1.0 - v) * (self.x_max - self.x_min)
+        # y = self.y_min + (1.0 - u) * (self.y_max - self.y_min)
     # Start the executor — callbacks fire from here
     robot_startup(global_node)
 
