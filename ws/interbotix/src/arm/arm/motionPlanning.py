@@ -36,7 +36,7 @@ class MotionPlanning:
         # self.y_min, self.y_max = -0.15, 0.15
 
         # workspace bounds for wx200
-        self.x_min, self.x_max = 0.26, 0.41  
+        self.x_min, self.x_max = 0.28, 0.43  
         self.y_min, self.y_max = -0.15, 0.15
         self.z = 0.1          
         self.node.declare_parameter('z_travel', 0.15)
@@ -261,7 +261,7 @@ def main(args=None):
         robot_model="wx200",#"px100",
         group_name="arm",
         gripper_name="gripper",
-        moving_time=1.5,
+        moving_time=1.6,
         accel_time=0.1,
         gripper_pressure=1.0, 
         node=global_node,

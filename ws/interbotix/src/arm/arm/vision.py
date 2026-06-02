@@ -33,6 +33,7 @@ class VisionNode(Node):
         img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'smiley_face.png')
         robot_img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'smiley_face.png')
 
+        img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'patrick.jpg')
         image = cv2.imread(img_path)
         robot_image = cv2.imread(robot_img_path)
         h, w = image.shape[:2]
@@ -40,7 +41,7 @@ class VisionNode(Node):
         img_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         
         # threshold instead of Canny — more reliable for simple shapes
-        _, thresh = cv2.threshold(img_gray, 50, 255, cv2.THRESH_BINARY_INV)
+        _, thresh = cv2.threshold(img_gray, 30, 255, cv2.THRESH_BINARY_INV)
 
         # Add border to prevent edge artifacts during skeletonization
         thresh = cv2.copyMakeBorder(thresh, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=0)
