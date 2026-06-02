@@ -15,6 +15,8 @@ setup(
         ('share/' + package_name, ['package.xml']),
         (os.path.join('lib', 'python3.12', 'site-packages', package_name), 
         glob('arm/*.png')),
+        (os.path.join('lib', 'python3.12', 'site-packages', package_name), 
+        glob('arm/*.jpg')),
     ],
     package_data={'': ['py.typed']},
     install_requires=['setuptools'],
