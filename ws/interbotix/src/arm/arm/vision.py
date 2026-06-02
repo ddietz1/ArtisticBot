@@ -31,7 +31,10 @@ class VisionNode(Node):
 
     def detect_coords(self):
         img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'smiley_face.png')
+        robot_img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'smiley_face.png')
+
         image = cv2.imread(img_path)
+        robot_image = cv2.imread(robot_img_path)
         h, w = image.shape[:2]
 
         img_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -106,6 +109,9 @@ class VisionNode(Node):
                 coords.append((u, v))
                 
         cv2.imshow('Dots', preview)
+
+        # compare preview dots image with the final output from the robot
+
         cv2.waitKey(0) 
 
         self.get_logger().info(f'Detected {len(coords)} vertices')
